@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
-for alpha in "abcdefghijklmnopqrstuvwxwz":
-    print(f"{alpha}", end = "")
+for c in range(97, 123):
+    print(f"{char(c)}", end = "")
