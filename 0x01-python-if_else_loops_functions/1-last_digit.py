@@ -4,7 +4,7 @@ import random
 number = random.randint(-10000, 10000)
 
 if number < 0:
-    rem = -number % 10
+    rem = number % -10
 else:
     rem = number % 10
 
