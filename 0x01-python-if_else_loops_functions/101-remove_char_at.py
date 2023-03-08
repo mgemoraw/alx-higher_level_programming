@@ -6,3 +6,4 @@ def remove_char_at(str, n):
             continue;
         else:
             nstr += str[i]
+    print("{0}".format(nstr))
