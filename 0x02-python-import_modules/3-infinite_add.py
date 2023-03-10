@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    """print 1 and 2"""
+import sys
 
-    from add_0 import add
+n = len(sys.argv)
 
-    a = 1
-    b = 2
+sum = 0
+else:
+    for x in range(1, n):
+        sum += int(sys.argv[x])
 
-    print("{} + {} = {}".format(a, b, add(a, b)))
+print("{}".format(sum))
