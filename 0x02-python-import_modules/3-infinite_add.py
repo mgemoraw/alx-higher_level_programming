@@ -6,7 +6,8 @@ if __name__ == "__main__":
 
     sum = 0
     if (n > 0):
-        for x in range(1, n):
+        for x in range(1, n + 1):
             sum += int(sys.argv[x])
 
     print("{}".format(sum))
+
