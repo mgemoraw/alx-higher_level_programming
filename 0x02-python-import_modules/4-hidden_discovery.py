@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    """print 1 and 2"""
+    """Hidden discovery"""
+    import hidden_4
 
-    from add_0 import add
-
-    a = 1
-    b = 2
-
-    print("{} + {} = {}".format(a, b, add(a, b)))
+    names = dir(hidden_4)
+    
+    for name in names:
+        if name[:2] != '__':
+            print("{}".format(name))
