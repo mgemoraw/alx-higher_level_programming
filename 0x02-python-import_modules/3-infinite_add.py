@@ -11,4 +11,3 @@ if __name__ == "__main__":
             asum += int(sys.argv[x])
 
     print("{}".format(asum))
-
