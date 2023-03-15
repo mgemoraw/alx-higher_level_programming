@@ -73,11 +73,16 @@ void free_listint(listint_t *head)
 	}
 }
 
+/**
+* rev_list - reverses linked list
+* @head: head of a linked list
+* Return: returns linked list head
+*/
 listint_t *rev_list(listint_t *head)
 {
 	listint_t *prev = NULL, *current = head, *temp;
 
-	while(current != NULL)
+	while (current != NULL)
 	{
 		temp = current->next;
 		current->next = prev;
