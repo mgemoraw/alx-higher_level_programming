@@ -53,5 +53,7 @@ int is_palindrome(listint_t **head)
 
 	}
 
+	if (!rev && !temp)
+		return (1);
 	return (1);
 }
