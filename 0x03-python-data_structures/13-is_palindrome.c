@@ -41,7 +41,7 @@ int is_palindrome(listint_t **head)
 	}
 	else
 	{
-		while (temp->next != NULL && rev->next != NULL)
+		while (temp != NULL && rev != NULL)
 		{
 			if (temp->n != rev->n)
 			{
