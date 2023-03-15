@@ -9,6 +9,9 @@ listint_t *rev_list(listint_t *head)
 {
 	listint_t *prev = NULL, *current = head, *temp;
 
+	if (head == NULL)
+		return NULL;
+
 	while (current != NULL)
 	{
 		temp = current->next;
