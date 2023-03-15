@@ -32,11 +32,10 @@ listint_t *rev_list(listint_t *head)
 int is_palindrome(listint_t **head)
 {
 	listint_t *rev, *temp;
-	size_t n = 0;
 
 	rev = rev_list(*head);
 	temp = *head;
-	if (temp == NULL)
+	if (*head == NULL)
 	{
 		return (1);
 	}
@@ -50,7 +49,6 @@ int is_palindrome(listint_t **head)
 			}
 			temp = temp->next;
 			rev = rev->next;
-			n++;
 		}
 
 	}
