@@ -2,6 +2,7 @@
 def raise_exception():
     raise None
 
+
 """TEST CODE
 try:
     raise_exception()
