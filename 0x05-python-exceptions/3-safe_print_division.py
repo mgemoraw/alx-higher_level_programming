@@ -3,15 +3,14 @@ def safe_print_division(a, b):
     result = 0
     try:
         result = a / b
-    
     except ZeroDivisionError:
         result = None
     finally:
-        print("{}".format(result))
+        print("Inside result: {}".format(result))
     return (result)
 
 
-"""TEST CODE
+# """TEST CODE
 a = 12
 b = 2
 result = safe_print_division(a, b)
@@ -22,4 +21,4 @@ b = 0
 result = safe_print_division(a, b)
 print("{:d} / {:d} = {}".format(a, b, result))
 
-"""
+# """
