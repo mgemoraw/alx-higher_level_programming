@@ -10,13 +10,12 @@ def safe_print_list_integers(my_list=[], x=0):
         except ValueError:
             pass
         except IndexError as e:
-            print("Index out of limt")
             raise e
     print()
     return (count)
 
 
-"""TEST CODE
+# """TEST CODE
 my_list = [1, 2, 3, 4, 5]
 
 nb_print = safe_print_list_integers(my_list, 2)
@@ -29,4 +28,4 @@ print("nb_print: {:d}".format(nb_print))
 nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
 print("nb_print: {:d}".format(nb_print))
 
-"""
+# """
