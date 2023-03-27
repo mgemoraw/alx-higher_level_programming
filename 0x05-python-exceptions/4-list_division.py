@@ -6,14 +6,18 @@ def list_division(my_list_1, my_list_2, list_length):
             length.append(i/j)
         except TypeError:
             print("wrong type")
+            length.append(0)
         except ZeroDivisionError:
             print("division by 0")
+            length.append(0)
         except IndexError:
             print("out or range")
-        else:
+            length.append(0)
+        except T:
+            # raise e
             length.append(0)
         finally:
-           pass
+            pass
     return length
 
 
@@ -30,4 +34,4 @@ my_l_2 = [2, 0, "H", 2, 7]
 result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
 print(result)
 
-"""        
+"""
