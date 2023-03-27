@@ -6,15 +6,14 @@ def safe_print_list_integers(my_list=[], x=0):
             print("{:d}".format(my_list[i]), end="")
             count += 1
         except Exception as e:
-            if (e is ValueError):
-                raise Exception
-            else:
-                continue
+            if (e is IndexError):
+                print(e) 
+        
     print()
     return (count)
 
 
-""" TEST CODE
+"""TEST CODE
 my_list = [1, 2, 3, 4, 5]
 
 nb_print = safe_print_list_integers(my_list, 2)
