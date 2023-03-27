@@ -7,6 +7,7 @@ def safe_print_integer(value):
     except Exception:
         return False
 
+
 """TEST Code
 value = 89
 has_been_print = safe_print_integer(value)
