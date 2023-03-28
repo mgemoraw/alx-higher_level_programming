@@ -50,7 +50,7 @@ class Square:
         return (self.__size ** 2)
 
 
-# """
+"""
 my_square = Square(89)
 print("Area: {} for size: {}".format(my_square.area(), my_square.size))
 
@@ -62,4 +62,4 @@ try:
     print("Area: {} for size: {}".format(my_square.area(), my_square.size))
 except Exception as e:
     print(e)
-# """
+"""
