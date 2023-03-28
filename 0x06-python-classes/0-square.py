@@ -1,8 +1,8 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 class Square:
     """
-    Square:
-        defines square of a number
+    Square is a class which defines a square method
     """
     pass
 
