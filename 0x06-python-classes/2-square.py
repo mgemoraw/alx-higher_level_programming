@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-# Square = __import__('0-square").Square
-
 
 """ Defining a Square class """
-
 
 class Square:
     """
@@ -21,7 +18,7 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         self._Square__size = size
-        
+
 
 """
 my_square_1 = Square(3)
