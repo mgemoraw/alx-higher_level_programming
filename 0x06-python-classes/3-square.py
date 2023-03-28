@@ -20,11 +20,16 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         self._Square__size = size
+
     def area(self):
-        """Public method area
+
+        """
+        Public method area
+
             :Return - returns square of the size
         """
-        return (self._Square__size **2)
+
+        return (self._Square__size ** 2)
 
 
 """
