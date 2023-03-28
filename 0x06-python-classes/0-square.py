@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+
+""" Defining a class called Square"""
+
+
 class Square:
     """
     Square is a class which defines a square method
