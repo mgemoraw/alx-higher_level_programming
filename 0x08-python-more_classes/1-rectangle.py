@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""1-recgangle module"""
+"""Redefining rectangle class"""
 
 class Rectangle:
     """Rectangle Class"""
