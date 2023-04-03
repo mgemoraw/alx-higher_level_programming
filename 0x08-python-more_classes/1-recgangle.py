@@ -2,7 +2,6 @@
 
 """1-recgangle module"""
 
-
 class Rectangle:
     """Rectangle Class"""
 
