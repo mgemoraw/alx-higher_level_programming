@@ -2,7 +2,7 @@
 """
 writes an object to text file using JSON
 """
-
+import json
 
 def save_to_file(my_obj, filename):
     """
