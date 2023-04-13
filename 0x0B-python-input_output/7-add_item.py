@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Exception handling
-Adds all arguments to a Python list and save them to a file.
+"""Adds all arguments to a Python list and save them to a file.
 """
 import sys
 
