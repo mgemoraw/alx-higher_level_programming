@@ -97,7 +97,7 @@ class Rectangle(Base):
             for arg in args:
                 if a == 0:
                     if arg is None:
-                        self.__init__(sefl, width, self.height, self.x, self.y)
+                        self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = arg
                 elif a == 1:
@@ -129,8 +129,8 @@ class Rectangle(Base):
         """Returns the dictionary representation of Rectangle"""
         return {
             "id": self.id,
-            "width": self.width
-            "height": self.height
-            "x": self.x
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
             "y": self.y
         }
