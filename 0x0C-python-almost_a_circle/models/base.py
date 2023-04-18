@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Base Class"""
+import json
 
 
 class Base:
@@ -16,3 +17,49 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Returns JSON representation of a list of dictionaries"""
+        if list_dictionaries is None or list_dictionaries == []:
+            return '[]'
+        return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Writes the JSON representation of list of objects"""
+        filename = cls.__name__+".json"
+        with open(filename, 'w') as jfile:
+            if list_objs is None:
+                jfile.write('[]')
+            else:
+                list_dicts = [o.to_dictionary() for o in list_objs]
+                jfile.write(Base.to_json_string(list_dicts))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns string from JSON string"""
+        if json_string is None or json_string =='[]':
+            return []
+        return json.loads(json_string)
+
+
+    @classmethod
+    def create(cls, **dictionry):
+        pass
+
+    @classmethod
+    def load_from_file(cls):
+        pass
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        pass
+    
+    @classmethod
+    def laod_from_file_csv(cls):
+        pass
+
+    @classmethod
+    def draw(list_rectangles, list_squares):
+        pass
