@@ -39,10 +39,9 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """Returns string from JSON string"""
-        if json_string is None or json_string =='[]':
+        if json_string is None or json_string == '[]':
             return []
         return json.loads(json_string)
-
 
     @classmethod
     def create(cls, **dictionry):
@@ -55,7 +54,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         pass
-    
+
     @classmethod
     def laod_from_file_csv(cls):
         pass
