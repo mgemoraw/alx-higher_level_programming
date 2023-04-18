@@ -44,12 +44,26 @@ class Base:
         return json.loads(json_string)
 
     @classmethod
-    def create(cls, **dictionry):
-        pass
+    def create(cls, **dictionary):
+        """Returns class instantiated from a dictionary """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new 
 
     @classmethod
     def load_from_file(cls):
-        pass
+        """Returns lis of classes instantiated from a JSON file"""
+        filename = str(cls.__name__)+".json"
+        try:
+            with open(filename, 'r') as jfile:
+                list_dicts = Base.from_json_string(jfile.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
