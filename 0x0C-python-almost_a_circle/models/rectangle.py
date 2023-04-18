@@ -4,10 +4,8 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle class
-    """
-
-    def __init__(self, width, height, x=0, y=0,id=None):
+    """Rectangle class"""
+    def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
         self.x = x
@@ -18,7 +16,7 @@ class Rectangle(Base):
     def width(self):
         """getter for width property"""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if type(value) != int:
@@ -31,7 +29,7 @@ class Rectangle(Base):
     def height(self):
         """getter for height"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if type(value) != int:
@@ -44,7 +42,7 @@ class Rectangle(Base):
     def x(self):
         """getter for x"""
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         if type(value) != int:
@@ -53,12 +51,11 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
-
     @property
     def y(self):
         """getter for y"""
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         if type(value) != int:
@@ -70,7 +67,7 @@ class Rectangle(Base):
     def area(self):
         """Returns the area of the Rectangle"""
         return self.width * self.height
-    
+
     def display(self):
         """prints the Rectangle using '#' character."""
         if self.width == 0 or self.height == 0:
@@ -84,9 +81,10 @@ class Rectangle(Base):
 
     def __str__(self):
         """Returns string representation of Rectangle Object"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
 
-    def update(self,*args, **kwargs):
+    def update(self, *args, **kwargs):
         """Updates Rectangle
         Args:
             *args (ints): list of attributes
