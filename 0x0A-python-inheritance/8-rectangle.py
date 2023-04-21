@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Defines new class called Rectangled which inherits from class BaseGeometry."""
+"""Defines new class called Rectangled which inherits
+from class BaseGeometry."""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
