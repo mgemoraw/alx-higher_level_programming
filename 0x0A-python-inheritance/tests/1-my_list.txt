@@ -14,6 +14,7 @@ Checking for method docstring:
 	True
 
 Checking that MyList inherits from list:
+	>>> MyList = __import__("1-my_list").MyList
 	>>> issubclass(MyList, list)
 	True
 
