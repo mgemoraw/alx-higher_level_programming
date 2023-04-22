@@ -20,7 +20,7 @@ class Student:
     def to_json(self, attrs=None):
         """Gets a dictionary representation of the Student object"""
         if (type(attrs) == list and all(type(element) == str for element in attrs )):
-            return {val: getattr(self, val), for val in attrs if hasattr(self, var)}    
+            return {v: getattr(self, v) for v in attrs if hasattr(self, v)}    
         return self.__dict__
     
     def reload_from_json(self, json):
