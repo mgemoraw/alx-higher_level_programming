@@ -50,9 +50,9 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
 
-        hash_rect = []
+        hash_rect = ""
         for h in range(self.__height):
-            [hash_rect.append("#") for w in range(self.__width)]
-            if h != self.__height - 1:
-                hash_rect.append("\n")
-            return ("".join(hash_rect))
+            for w in range(self.__width):
+                hash_rect += "#"
+            hash_rect +="\n"
+        return hash_rect
