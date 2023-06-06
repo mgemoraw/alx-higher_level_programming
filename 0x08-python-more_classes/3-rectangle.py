@@ -55,5 +55,5 @@ class Rectangle:
             for w in range(self.__width):
                 hash_rect += "#"
             if (h != self.__height - 1):
-                hash_rect +="\n"
+                hash_rect += "\n"
         return hash_rect
