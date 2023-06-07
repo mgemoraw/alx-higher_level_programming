@@ -3,8 +3,9 @@
 
 
 def matrix_divided(matrix, div):
-    """Args
-        : matrix (float) - must be a list of lists of integers or floats
+    """divide matrix by div
+    Args:
+        matrix (float) - must be a list of lists of integers or floats
         div (float): divider float or integer
     """
     for row in matrix:
