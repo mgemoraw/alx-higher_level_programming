@@ -3,9 +3,14 @@
 
 
 def add_integer(a, b=98):
-    if not(isinstance(a, float) or isinstance(a, int)):
+    """adds two integers
+    Args:
+        a (int) - first integer
+        b (int) - second integer default = 98
+    """
+    if not (isinstance(a, float) or isinstance(a, int)):
         raise TypeError('a must be an integer')
-    
+
     if not (isinstance(b, float) or isinstance(b, int)):
         raise TypeError('b must be an integer')
 
