@@ -70,7 +70,7 @@ class Base:
         pass
 
     @classmethod
-    def laod_from_file_csv(cls):
+    def loadd_from_file_csv(cls):
         pass
 
     @classmethod
