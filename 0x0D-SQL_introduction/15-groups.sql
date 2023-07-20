@@ -1,4 +1,4 @@
 -- lists number of records
-select score, count(*) as number
-from second_table group by score
-order by number desc;
+SELECT `score`, count(*) AS `number`
+FROM `second_table` GROUP BY `score`
+order by `number` desc;
