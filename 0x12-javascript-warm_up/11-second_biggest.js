@@ -2,13 +2,13 @@
 const args = process.argv;
 function getSecondMax (args) {
   let max = parseInt(args[2]);
-  let smax = parseInt(args[2]);
+  let smax = 0;
   for (let i = 3; i < args.length; i++) {
     if (parseInt(args[i]) > max) {
       max = parseInt(args[i]);
     }
   }
-  for (let j = 3; j < args.length; j++) {
+  for (let j = 2; j < args.length; j++) {
     if ((parseInt(args[j]) < max) && (parseInt(args[j]) > smax)) {
       smax = parseInt(args[j]);
     }
