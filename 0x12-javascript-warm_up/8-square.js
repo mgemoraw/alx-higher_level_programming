@@ -7,6 +7,6 @@ if (!parseInt(args[2])) {
 } else {
   const x = parseInt(args[2]);
   for (let row = 0; row < x; row++) {
-    console.log('x'.repeat(x));
+    console.log('X'.repeat(x));
   }
 }
