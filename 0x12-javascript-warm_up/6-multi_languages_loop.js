@@ -1,9 +1,7 @@
 #!/usr/bin/node
-const args = process.argv;
+const lines = ['C is fun','Python is cool', 'JavaScript is amazing'];
 
-// prints My number: <first argument converted in integer>
-if (!(parseInt(args[2]))) {
-  console.log('Not a number');
-} else {
-  console.log(`My number: ${parseInt(args[2])}`);
+// prints 3 lines: (like 1-multi_languages.js)
+for (const t in lines) {
+  console.log(lines[t]);
 }
