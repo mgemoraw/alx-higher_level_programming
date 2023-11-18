@@ -1,8 +1,8 @@
 #!/usr/bin/node
-class Rectangle {
+export class Rectangle {
   constructor () {
     return this;
   }
 }
 
-exports.Rectangle = Rectangle;
+// exports.Rectangle = Rectangle;
