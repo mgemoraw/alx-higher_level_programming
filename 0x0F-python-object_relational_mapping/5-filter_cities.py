@@ -13,8 +13,9 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     mt = sys.argv[4]
-    cursor.execute("""SELECT cities.name FROM cities INNER JOIN states
-                   ON states.id=cities.state_id WHERE states.name=%s""", (sys.argv[4],))
+    cursor.execute("""SELECT cities.name FROM cities
+                   INNER JOIN states ON states.id=cities.state_id
+                   WHERE states.name=%s""", (sys.argv[4],))
     records = cursor.fetchall()
     temp = list(row[0] for row in records)
     print(*temp, sep=", ")
