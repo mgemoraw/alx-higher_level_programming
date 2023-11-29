@@ -3,17 +3,16 @@ const Square1 = require('./5-square');
 
 // Defines square object from Rectangle object
 class Square extends Square1 {
-  constructor (size) {
-    super(size);
-  }
-
   charPrint (c) {
     if (!c) {
-      this.print();
-    } else {
-      for (let i = 0; i < this.size; i++) {
-        console.log(c.repeat(this.size));
+      c = 'X';
+    }
+    for (let r = 0; r < this.height; r++) {
+      let ss = '';
+      for (let i = 0; i < this.width; i++) {
+        ss += c;
       }
+      console.log(ss);
     }
   }
 }
