@@ -4,7 +4,7 @@ A Script that takes in URL,
 sends a request to the URL and displays the body of the response
 decoded in utf-8
 """
-from urllib import request , error
+from urllib import request, error
 import sys
 
 
