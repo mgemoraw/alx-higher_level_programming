@@ -8,7 +8,7 @@ import sys
 
 
 if __name__ == "__main__":
-    arg = "" if len(sys.argv[1]) == 1 else sys.argv[1]
+    arg = "" if len(sys.argv) == 1 else sys.argv[1]
 
     payload = {'q': arg}
     url = 'http://0.0.0.0:5000/search_user'
