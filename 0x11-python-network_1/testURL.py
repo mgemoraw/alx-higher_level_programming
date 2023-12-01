@@ -1,6 +1,15 @@
 import requests
+import sys
 
-r = requests.get("https://api.github.com/user", auth=("user", "pass"))
+
+# url = sys.argv[1]
+# username = sys.argv[2]
+# password = sys.argv[3]
 
 
-print(r.status_code)
+payload = {'username': 'corey', 'password': 'testing'}
+
+r = requests.post('https://httpbin.org/post', data=payload)
+
+r_dict = r.json()
+print(r_dict['form'])
