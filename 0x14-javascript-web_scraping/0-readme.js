@@ -11,10 +11,10 @@ function readFile (filePath) {
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
       // Handles errors, e.g., file not found
-      console.error(`Error reading file: ${err.message}`);
+      console.log(err);
     } else {
       // Read and pring the contents of the file
-      console.log(data);
+      process.stdout.write(data)
     }
   });
 }
