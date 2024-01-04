@@ -5,7 +5,7 @@ const request = require('request');
 const url = process.argv[2];
 
 // getting requests
-request(url, (err, data) => {
+request(url, (_err, data) => {
   // print respons status code to the console
   console.log('code:', data.statusCode);
 });
