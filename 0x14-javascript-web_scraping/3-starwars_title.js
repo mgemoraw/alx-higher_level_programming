@@ -8,6 +8,6 @@ const SWAPI = 'https://swapi-api.alx-tools.com/api/films/'.concat(movieId);
 // getting requests
 request(SWAPI, (_err, _data, movie) => {
   movie = JSON.parse(movie);
-  // print respons status code to the console
+  // print movie title with correspoinding id
   console.log(movie.title);
 });

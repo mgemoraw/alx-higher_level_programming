@@ -1,18 +1,28 @@
 #!/usr/bin/node
-const fs = require('fs');
+const request = require('request');
 
 // Specifying the file path
-const filePath = process.argv[2];
-const data = process.argv[3];
+const swapi = process.argv[2];
+// const SWAPI = 'https://swapi-api.alx-tools.com/api/films/'.concat(movieId);
 
-writeFile(filePath);
+let counter = 0;
 
-function writeFile (filePath) {
-  // Read the content of the file asynchronously
-  fs.writeFile(filePath, data, 'utf8', (err) => {
-    if (err) {
-      // Handles errors, e.g., file not found
-      console.log(err);
+// getting requests
+request(swapi, (_err, _data, movie) => {
+  movie = JSON.parse(movie).results;
+
+  for (let i = 0; i < movie.length; ++i) {
+    const chars = movie[i].characters;
+
+    for (let j = 0; j < chars.length; ++j) {
+      const char = chars[j];
+      const charId = char.split('/')[5];
+
+      if (charId === '18') {
+        counter += 1;
+      }
     }
-  });
-}
+  }
+  // print respons status code to the console
+  console.log(counter);
+});
