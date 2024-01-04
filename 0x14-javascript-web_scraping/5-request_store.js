@@ -7,7 +7,7 @@ const url = process.argv[2];
 const filePath = process.argv[3];
 
 // getting requests
-request(url, (_err, data) => {
+request(url, (_err, _response, data) => {
   // writing result to the filepath
   fs.writeFile(filePath, data, 'utf8', (err) => {
     if (err) {
