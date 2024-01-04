@@ -1,4 +1,4 @@
-#!/usr/bin/nodejs
+#!/usr/bin/node
 const fs = require('fs');
 
 // Specifying the file path
