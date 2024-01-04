@@ -14,7 +14,7 @@ function readFile (filePath) {
       console.log(err);
     } else {
       // Read and pring the contents of the file
-      process.stdout.write(data)
+      process.stdout.write(data);
     }
   });
 }
