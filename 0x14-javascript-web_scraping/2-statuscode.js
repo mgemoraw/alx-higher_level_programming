@@ -1,18 +1,11 @@
 #!/usr/bin/node
-const fs = require('fs');
+const fs = require('request');
 
 // Specifying the file path
-const filePath = process.argv[2];
-const data = process.argv[3];
+const url = process.argv[2];
 
-writeFile(filePath);
-
-function writeFile (filePath) {
-  // Read the content of the file asynchronously
-  fs.writeFile(filePath, data, 'utf8', (err) => {
-    if (err) {
-      // Handles errors, e.g., file not found
-      console.log(err);
-    }
-  });
-}
+//getting requests
+request(url, (err, data) =>{
+  // print respons status code to the console
+  console.log('code:', data.statusCode);
+});
