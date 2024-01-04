@@ -3,18 +3,16 @@ const fs = require('fs');
 
 // Specifying the file path
 const filePath = process.argv[2];
+const data = process.argv[3];
 
-readFile(filePath);
+writeFile(filePath);
 
-function readFile (filePath) {
+function writeFile (filePath) {
   // Read the content of the file asynchronously
-  fs.readFile(filePath, 'utf8', (err, data) => {
+  fs.writeFile(filePath, data, 'utf8', (err) => {
     if (err) {
       // Handles errors, e.g., file not found
       console.log(err);
-    } else {
-      // Read and pring the contents of the file
-      process.stdout.write(data);
     }
   });
 }
