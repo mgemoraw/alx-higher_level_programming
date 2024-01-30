@@ -1,10 +1,8 @@
 #!/usr/bin/node
 const fs = require('fs');
 
-
+// file path
 const filePath = process.argv[2];
-
-
 
 // function that reads and prints a file
 fs.readFile(filePath, 'utf8', (err, data) => {
