@@ -5,11 +5,10 @@ const request = require('request');
 const url = process.argv[2];
 
 // get status code of fetch request
-request(url, (err, response, body) => {
+request(url, (_err, response) => {
   // check if error is returned
-  if (err) throw err;
-  // console.log(err);
+  if (_err) throw _err;
 
   // else print status code
-  console.log(response.statusCode);
+  console.log('code:', response.statusCode);
 });
